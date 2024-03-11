@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image to PDF Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Image to PDF Converter</h2>
+  
+  <form action="/api/convert-to-pdf" method="post" enctype="multipart/form-data">
+    <label for="images">Select Images:</label>
+    <input type="file" name="images" id="images" accept=".png, .jpg, .jpeg, .gif" multiple required>
+
+    <label for="outputName">PDF File Name:</label>
+    <input type="text" name="outputName" id="outputName" placeholder="Enter PDF file name" required>
+
+    <button type="submit">Convert to PDF</button>
+  </form>
+
+</body>
+</html>
